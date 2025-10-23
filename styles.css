@@ -1,117 +1,169 @@
-/* Reset and base styles */
+/* --- GLOBAL RESET --- */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    font-family: "Segoe UI", Arial, sans-serif;
-    line-height: 1.6;
-    background: #f7f7f7;
-    color: #333;
-  }
-  
-  /* Header */
-  header {
-    background: white;
-    border-bottom: 1px solid #ddd;
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-  
-  .brand {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .slogan {
-    font-weight: 600;
-    color: #222;
-    font-size: 0.9rem;
-  }
-  
-  nav {
-    display: flex;
-    gap: 12px;
-  }
-  
-  nav a {
-    text-decoration: none;
-    color: #0b5ed7;
-    padding: 6px 10px;
-    border-radius: 5px;
-  }
-  
-  nav a:hover {
-    background-color: #e8f0ff;
-  }
-  
-  /* Layout */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f4f7fb;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* --- HEADER --- */
+header {
+  background: #ffffff;
+  border-bottom: 2px solid #cfd8dc;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.slogan {
+  font-weight: 600;
+  color: #2b2b2b;
+  font-size: 0.9rem;
+}
+
+/* --- NAVIGATION --- */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #1565c0;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: 0.2s ease-in-out;
+  font-weight: 500;
+}
+
+nav a:hover {
+  background: #e3f2fd;
+}
+
+/* --- LAYOUT --- */
+.container {
+  display: flex;
+  gap: 20px;
+  max-width: 1100px;
+  margin: 25px auto;
+  padding: 0 20px;
+}
+
+main {
+  flex: 0 1 80%;
+  background: #ffffff;
+  padding: 20px 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+aside {
+  flex: 0 1 20%;
+  background: #f0f4f8;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* --- HEADINGS --- */
+h1, h2, h3 {
+  color: #0b5ed7;
+  margin-bottom: 10px;
+}
+
+/* --- LINKS --- */
+a {
+  color: #1565c0;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* --- FORMS --- */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 450px;
+}
+
+label {
+  font-weight: 600;
+}
+
+input, select {
+  padding: 8px;
+  border: 1px solid #b0bec5;
+  border-radius: 5px;
+  width: 100%;
+}
+
+fieldset {
+  border: 1px solid #90a4ae;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+legend {
+  font-weight: 600;
+  color: #0b5ed7;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  background: #0b5ed7;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #1976d2;
+}
+
+/* --- FOOTER --- */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #ffffff;
+  border-top: 2px solid #cfd8dc;
+  color: #555;
+  margin-top: 30px;
+}
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 768px) {
   .container {
-    display: flex;
-    gap: 20px;
-    max-width: 1100px;
-    margin: 20px auto;
-    padding: 0 20px;
+    flex-direction: column;
   }
-  
-  main {
-    flex: 0 1 80%;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  main, aside {
+    flex: 1 1 100%;
+    width: 100%;
   }
-  
-  aside {
-    flex: 0 1 20%;
-    background: white;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  nav {
+    justify-content: center;
   }
-  
-  aside ul {
-    list-style: none;
-  }
-  
-  aside a {
-    color: #0b5ed7;
-    text-decoration: none;
-  }
-  
-  aside a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Footer */
-  footer {
-    text-align: center;
-    padding: 15px;
-    color: #666;
-    background: #fff;
-    border-top: 1px solid #ddd;
-    margin-top: 20px;
-  }
-  
-  /* Responsive design */
-  @media (max-width: 768px) {
-    .container {
-      flex-direction: column;
-    }
-  
-    main, aside {
-      flex: 1 1 100%;
-      width: 100%;
-    }
-  
-    nav {
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-  }
+}
